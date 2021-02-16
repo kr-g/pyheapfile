@@ -176,6 +176,7 @@ class HeapFile(object):
         self.write(node.to_bytes())
         if data != None:
             self.write_node_content(node, data)
+        return node
 
     def write_node_content(self, node, data, offs=0):
         # this doesnt write the node itself
@@ -183,6 +184,7 @@ class HeapFile(object):
             raise Exception("boundery violation")
         self.seek(node.id + offs + Node.node_size())
         self.write(data)
+        return node
 
     def find_free(self, datalen, equal_size_match=False):
         n = self.read_node(0)
@@ -196,10 +198,12 @@ class HeapFile(object):
             n = self.read_next(n)
         return n
 
-    def alloc(self, datalen, data=None):
-        n = self.find_free(datalen)
+    def alloc(self, datalen, data=None, equal_size_match=False):
+        n = self.find_free(datalen, equal_size_match)
         if n == None:
             return self.alloc_append(datalen, data)
+        if n.used != 0:
+            raise Exception("internal error")
         n.used = datalen
         return self.write_node(n, data)
 

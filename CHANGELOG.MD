@@ -1,6 +1,10 @@
 
 # changelog
 
+## release v0.0.2
+
+- fix return object references in `write_node()`
+- 
 
 
 ## release v0.0.1 
