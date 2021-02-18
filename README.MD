@@ -33,7 +33,7 @@ because of this the `free()` method merges only (continuesly read) nodes properl
 calling `read_node()` multiple time creates multiple Node objects.
 in case one of them change the others are unaware of the change.
 
-a heap node is marked s free when `used` is set to 0. 
+a heap node is marked as free when `used` is set to 0. 
 when requesting memory with `alloc()` search begins from the file head 
 until a fiting node (requested_size <= `aloc`, and `used` == 0) is found.
 if no fitting node is found `alloc()` calls `alloc_appened()` whats adds 
