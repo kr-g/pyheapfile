@@ -39,6 +39,9 @@ until a fiting node (requested_size <= `aloc`, and `used` == 0) is found.
 if no fitting node is found `alloc()` calls `alloc_appened()` whats adds 
 a new node at the end of the file. 
 
+because of this behaviour of `alloc()` its not possible to 
+allocate (or preserve) empty nodes for whatever reason.
+
 
 ## limitation
 
