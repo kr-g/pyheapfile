@@ -4,7 +4,9 @@
 
 # pyheapfile - heap file storage
 
-`pyheapfile` is a file persistent heap structure (single linked list)
+`pyheapfile` implements a file persistent 
+[`heap structure`](https://en.wikipedia.org/wiki/Heap_(data_structure)) 
+as single linked list
 
 
 # memory / file layout
