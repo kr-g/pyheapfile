@@ -18,5 +18,7 @@
   - journal file support
   - write before-image integration
 - compact heap, reorg methods
+- convert (encode/decode) of standard types (refactor from btree project)
 - 
+
 
