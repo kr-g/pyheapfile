@@ -136,7 +136,7 @@ the internal hexdump tool for dumping single nodes from the heapfile can be call
                             with of data output (default: 16)
       -g GROUP, --group GROUP
                             group bytes in data output (default: 1)
-      -ho, --header_only    prints only header, no data (default: 0)
+      -ho, --header_only    prints only header, no data.
 
 
 

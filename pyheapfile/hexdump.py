@@ -123,8 +123,8 @@ def main():
         "--header_only",
         dest="header_only",
         action="store_false",
-        help="prints only header, no data (default: %(default)s)",
-        default="0",
+        help="prints only header, no data.",
+        default=True,
     )
 
     args = parser.parse_args()
