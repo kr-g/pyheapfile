@@ -129,6 +129,8 @@ the internal hexdump tool for dumping single nodes from the heapfile can be call
                             input file
       -n NODE_NO, --node NODE_NO
                             hex address of node. blanks in a quoted string are ignored. (default: 000000)
+      -aw ADDESS_WIDTH, --addess_width ADDESS_WIDTH
+                            hex address width. (default: 6)
       -r REL_NO, --relative REL_NO
                             relative position of node. can be combined with -n option when positive. when negative it reads from the end of the heap. keep in mind that -n
                             is an address and -r is a position. (default: 0)
