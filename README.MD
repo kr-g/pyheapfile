@@ -8,6 +8,12 @@
 [`heap structure`](https://en.wikipedia.org/wiki/Heap_(data_structure)) 
 as single linked list
 
+# What's new ?
+
+Check
+[`CHANGELOG`](https://github.com/kr-g/pyheapfile/blob/main/CHANGELOG.MD)
+for latest ongoing, or upcoming news
+
 
 # memory / file layout
 
