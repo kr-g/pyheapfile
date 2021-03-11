@@ -2,7 +2,13 @@
 # changelog
 
 
-## next release v0.0.3
+## next release v0.0.4
+
+- added hexdump tool
+-
+
+
+## release v0.0.3
 
 - added hexdump tool
 -
