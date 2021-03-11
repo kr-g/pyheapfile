@@ -120,6 +120,7 @@ to explore the content of a heap file.
 
 ## remark on hexdump tool
 
+hexdump tool raise error when configured not properly. use valid hex address for node.
 the internal hexdump tool for dumping single nodes from the heapfile can be called with:
 
 
