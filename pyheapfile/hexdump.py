@@ -28,7 +28,10 @@ def hexdumps(mem, width=16, group=1, output=True, start_adr=None, addess_width=6
         out += " "
 
         if len(line) < width:
-            out += "   " * (width - len(line))
+            miss = width - len(line)
+            miss_grp = int(miss / group)
+            to_insert = (2 * group + 1) * miss_grp
+            out += " " * to_insert
 
         out += ": "
 
