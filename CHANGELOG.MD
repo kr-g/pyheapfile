@@ -4,7 +4,7 @@
 
 ## next release v0.0.4
 
-- added hexdump tool
+- added hexdump adr width
 -
 
 

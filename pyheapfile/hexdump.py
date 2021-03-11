@@ -11,7 +11,7 @@ PRINTCHARS = (
 PRINTCHARS_enc = PRINTCHARS.encode()
 
 
-def hexdumps(mem, width=16, group=1, output=True, start_adr=None):
+def hexdumps(mem, width=16, group=1, output=True, start_adr=None, addess_width=6):
 
     adr = start_adr if start_adr != None else 0
 
@@ -21,7 +21,7 @@ def hexdumps(mem, width=16, group=1, output=True, start_adr=None):
 
         line, mem = mem[:width], mem[width:]
 
-        out = f"{adr:06x}" + " : "
+        out = f"{adr:0{addess_width}x}" + " : "
         adr += width
 
         out += line.hex(" ", group)
@@ -91,6 +91,15 @@ def main():
         default=f"{0:06x}",
     )
     parser.add_argument(
+        "-aw",
+        "--addess_width",
+        type=int,
+        dest="addess_width",
+        action="store",
+        help="hex address width. (default: %(default)s)",
+        default=6,
+    )
+    parser.add_argument(
         "-r",
         "--relative",
         type=int,
@@ -141,6 +150,7 @@ def main():
     rel_no = args.rel_no
     header_only = args.header_only
     width = args.width
+    addess_width = args.addess_width
     group = args.group
     verbose = args.verbose
 
@@ -170,7 +180,9 @@ def main():
 
     if header_only:
         data = hpf.read_node_content(node)
-        hexdumps(data, start_adr=node.id, width=width, group=group)
+        hexdumps(
+            data, start_adr=node.id, width=width, group=group, addess_width=addess_width
+        )
 
     hpf.close()
 
