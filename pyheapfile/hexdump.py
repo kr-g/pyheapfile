@@ -48,6 +48,9 @@ def main():
     import os
     import argparse
 
+    from pyheapfile.heap import HeapFile
+    from pyheapfile import VERSION
+
     parser = argparse.ArgumentParser(
         prog="hexdump",
         usage="python3 -m pyheapfile.%(prog)s [options]",
@@ -132,9 +135,6 @@ def main():
     if args.show_version:
         print("Version:", VERSION)
         return
-
-    from pyheapfile.heap import HeapFile
-    from pyheapfile import VERSION
 
     fnam = os.path.expanduser(args.file_name)
     node_nr = int(args.node_no.replace(" ", ""), 16)
