@@ -1,10 +1,16 @@
 
 # changelog
 
+
+## next release v0.0.3
+
+- added hexdump tool
+-
+
+
 ## release v0.0.2
 
 - fix return object references in `write_node()`
-- added hexdump tool
 - 
 
 
