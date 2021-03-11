@@ -4,6 +4,7 @@
 ## release v0.0.2
 
 - fix return object references in `write_node()`
+- added hexdump tool
 - 
 
 

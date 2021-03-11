@@ -112,6 +112,33 @@ is less than the `aloc` (allocated) range.
 under linux you can use `hexdump -Cv filename.hpf` from bash
 to explore the content of a heap file.
 
+## remark on hexdump tool
+
+the internal hexdump tool for dumping single nodes from the heapfile can be called with:
+
+
+    usage: python3 -m pyheapfile.hexdump [options]
+
+    dump heapfile nodes
+
+    optional arguments:
+      -h, --help            show this help message and exit
+      -v, --version         show version info and exit
+      -V, --verbose         show more info
+      -f FILE_NAME, --file FILE_NAME
+                            input file
+      -n NODE_NO, --node NODE_NO
+                            hex address of node. blanks in a quoted string are ignored. (default: 000000)
+      -r REL_NO, --relative REL_NO
+                            relative position of node. can be combined with -n option when positive. when negative it reads from the end of the heap. keep in mind that -n
+                            is an address and -r is a position. (default: 0)
+      -w WIDTH, --width WIDTH
+                            with of data output (default: 16)
+      -g GROUP, --group GROUP
+                            group bytes in data output (default: 1)
+      -ho, --header_only    prints only header, no data (default: 0)
+
+
 
 # how to use
 
